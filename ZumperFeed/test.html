@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        myUnits = ["265"];
+        $.ajax({
+            url: 'Zumper/sendData',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                PropertyID: '2',
+                Units: myUnits
+            },
+            success: function (data) {
+                alert("success");
+            },
+            error: function (error) {
+                console.debug(error);
+            }
+        });
+    </script>
+</body>
+</html>
